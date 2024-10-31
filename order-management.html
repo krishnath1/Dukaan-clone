@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Management - Dukaan Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Order Management</h1>
+        </header>
+
+        <main>
+            <section class="order-tracking">
+                <h2>Order Tracking</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Order ID</th>
+                            <th>Customer Name</th>
+                            <th>Status</th>
+                            <th>Total Amount</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="orderTable">
+                        <!-- Order rows will be added dynamically here -->
+                    </tbody>
+                </table>
+            </section>
+
+            <section class="order-fulfillment">
+                <h2>Order Fulfillment</h2>
+                <form id="fulfillmentForm">
+                    <label for="orderId">Enter Order ID to Fulfill:</label>
+                    <input type="text" id="orderId" required>
+                    <button type="submit">Mark as Fulfilled</button>
+                </form>
+            </section>
+
+            <section class="shipping-options">
+                <h2>Shipping Options</h2>
+                <form id="shippingForm">
+                    <label for="shippingProvider">Select Shipping Provider:</label>
+                    <select id="shippingProvider" required>
+                        <option value="">Select...</option>
+                        <option value="provider1">Provider 1</option>
+                        <option value="provider2">Provider 2</option>
+                        <option value="provider3">Provider 3</option>
+                    </select>
+                    <label for="shippingCost">Shipping Cost:</label>
+                    <input type="number" id="shippingCost" required>
+                    <button type="submit">Calculate Shipping</button>
+                </form>
+                <p id="shippingResult"></p>
+            </section>
+
+            <section class="order-notifications">
+                <h2>Order Notifications</h2>
+                <form id="notificationForm">
+                    <label for="customerEmail">Customer Email:</label>
+                    <input type="email" id="customerEmail" required>
+                    <label for="orderStatus">Order Status:</label>
+                    <select id="orderStatus" required>
+                        <option value="">Select Status...</option>
+                        <option value="Processing">Processing</option>
+                        <option value="Shipped">Shipped</option>
+                        <option value="Delivered">Delivered</option>
+                    </select>
+                    <button type="submit">Send Notification</button>
+                </form>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2024 Dukaan Clone. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Dummy order data for demonstration
+        const orders = [
+            { id: 'ORD001', customer: 'John Doe', status: 'Processing', amount: '100.00' },
+            { id: 'ORD002', customer: 'Jane Smith', status: 'Shipped', amount: '150.00' },
+        ];
+
+        // Function to render orders in the table
+        function renderOrders() {
+            const orderTable = document.getElementById('orderTable');
+            orderTable.innerHTML = ''; // Clear existing rows
+            orders.forEach(order => {
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td>${order.id}</td>
+                    <td>${order.customer}</td>
+                    <td>${order.status}</td>
+                    <td>$${order.amount}</td>
+                    <td><button onclick="fulfillOrder('${order.id}')">Fulfill</button></td>
+                `;
+                orderTable.appendChild(row);
+            });
+        }
+
+        // Fulfill order function
+        function fulfillOrder(orderId) {
+            const order = orders.find(o => o.id === orderId);
+            if (order) {
+                order.status = 'Fulfilled'; // Update order status
+                alert(`Order ${orderId} marked as fulfilled.`);
+                renderOrders(); // Re-render the order table
+            }
+        }
+
+        // Shipping calculation
+        document.getElementById('shippingForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const shippingProvider = document.getElementById('shippingProvider').value;
+            const shippingCost = document.getElementById('shippingCost').value;
+            document.getElementById('shippingResult').innerText = `Shipping cost via ${shippingProvider}: $${shippingCost}`;
+        });
+
+        // Notification sending (dummy implementation)
+        document.getElementById('notificationForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            const email = document.getElementById('customerEmail').value;
+            const status = document.getElementById('orderStatus').value;
+            alert(`Notification sent to ${email} about the order status: ${status}`);
+        });
+
+        // Initial render
+        renderOrders();
+    </script>
+</body>
+</html>

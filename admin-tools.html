@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Tools - Dukaan Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Admin Tools</h1>
+        </header>
+
+        <main>
+            <!-- User Roles and Permissions Section -->
+            <section class="user-roles">
+                <h2>User Roles and Permissions</h2>
+                <form id="rolesForm">
+                    <label for="userName">User Name:</label>
+                    <input type="text" id="userName" required>
+                    <label for="role">Assign Role:</label>
+                    <select id="role" required>
+                        <option value="admin">Admin</option>
+                        <option value="manager">Manager</option>
+                        <option value="staff">Staff</option>
+                    </select>
+                    <button type="submit">Assign Role</button>
+                </form>
+                <p id="roleMessage"></p>
+            </section>
+
+            <!-- Multi-Language Support Section -->
+            <section class="multi-language-support">
+                <h2>Multi-Language Support</h2>
+                <button id="enableMultiLanguage">Enable Multi-Language Support</button>
+                <p id="languageMessage"></p>
+            </section>
+
+            <!-- Backup and Recovery Section -->
+            <section class="backup-recovery">
+                <h2>Backup and Recovery</h2>
+                <button id="backupData">Backup Data</button>
+                <p id="backupMessage"></p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2024 Dukaan Clone. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // User Roles Handling
+        document.getElementById('rolesForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            const userName = document.getElementById('userName').value;
+            const role = document.getElementById('role').value;
+            document.getElementById('roleMessage').innerText = `Role "${role}" assigned to user "${userName}".`;
+            this.reset(); // Reset the form fields
+        });
+
+        // Multi-Language Support
+        document.getElementById('enableMultiLanguage').addEventListener('click', function() {
+            document.getElementById('languageMessage').innerText = "Multi-language support enabled!";
+        });
+
+        // Backup and Recovery
+        document.getElementById('backupData').addEventListener('click', function() {
+            document.getElementById('backupMessage').innerText = "Data backup completed successfully!";
+        });
+    </script>
+</body>
+</html>

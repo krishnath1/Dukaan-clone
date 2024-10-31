@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Logout - Dukaan Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Logout</h1>
+        </header>
+
+        <main>
+            <section class="logout-confirmation">
+                <h2>Logout Confirmation</h2>
+                <p>Are you sure you want to log out?</p>
+                <button id="confirmLogout">Yes, log me out</button>
+                <button id="cancelLogout">Cancel</button>
+                <p id="logoutMessage"></p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2024 Dukaan Clone. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.getElementById('confirmLogout').addEventListener('click', function() {
+            // Simulate logout functionality
+            document.getElementById('logoutMessage').innerText = "You have successfully logged out.";
+            // Optionally, redirect to the login page after logout
+            setTimeout(() => {
+                window.location.href = 'login.html'; // Change to your login page
+            }, 2000);
+        });
+
+        document.getElementById('cancelLogout').addEventListener('click', function() {
+            // Redirect back to dashboard or another relevant page
+            window.location.href = 'dashboard.html'; // Change to your dashboard page
+        });
+    </script>
+</body>
+</html>

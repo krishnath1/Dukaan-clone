@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics and Reporting - Dukaan Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Analytics and Reporting</h1>
+        </header>
+
+        <main>
+            <!-- Sales Reports Section -->
+            <section class="sales-reports">
+                <h2>Sales Reports</h2>
+                <button id="generateSalesReport">Generate Sales Report</button>
+                <p id="salesReportMessage"></p>
+            </section>
+
+            <!-- Customer Insights Section -->
+            <section class="customer-insights">
+                <h2>Customer Insights</h2>
+                <button id="viewCustomerInsights">View Customer Insights</button>
+                <p id="customerInsightsMessage"></p>
+            </section>
+
+            <!-- Traffic Analysis Section -->
+            <section class="traffic-analysis">
+                <h2>Traffic Analysis</h2>
+                <button id="viewTrafficAnalysis">View Traffic Analysis</button>
+                <p id="trafficAnalysisMessage"></p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2024 Dukaan Clone. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Sales Report Generation
+        document.getElementById('generateSalesReport').addEventListener('click', function() {
+            document.getElementById('salesReportMessage').innerText = "Sales report generated successfully!";
+        });
+
+        // Customer Insights
+        document.getElementById('viewCustomerInsights').addEventListener('click', function() {
+            document.getElementById('customerInsightsMessage').innerText = "Customer insights data displayed.";
+        });
+
+        // Traffic Analysis
+        document.getElementById('viewTrafficAnalysis').addEventListener('click', function() {
+            document.getElementById('trafficAnalysisMessage').innerText = "Traffic analysis data displayed.";
+        });
+    </script>
+</body>
+</html>

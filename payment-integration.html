@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Integration - Dukaan Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Payment Integration</h1>
+        </header>
+
+        <main>
+            <!-- Payment Gateway Setup Section -->
+            <section class="payment-gateway-setup">
+                <h2>Payment Gateway Setup</h2>
+                <form id="gatewayForm">
+                    <label for="gateway">Choose a Payment Gateway:</label>
+                    <select id="gateway" required>
+                        <option value="esewa">Esewa</option>
+                        <option value="fonepay">Fone Pay</option>
+                        <option value="timepay">Time Pay</option>
+                        <option value="khalti">Khalti Wallet</option>
+                    </select>
+                    <button type="submit">Integrate Gateway</button>
+                </form>
+                <p id="gatewayMessage"></p>
+            </section>
+
+            <!-- Cash on Delivery Section -->
+            <section class="cash-on-delivery">
+                <h2>Cash on Delivery (COD)</h2>
+                <button id="enableCOD">Enable Cash on Delivery</button>
+                <p id="codMessage"></p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2024 Dukaan Clone. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Payment Gateway Setup Handling
+        document.getElementById('gatewayForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            const gateway = document.getElementById('gateway').value;
+            document.getElementById('gatewayMessage').innerText = `${gateway.charAt(0).toUpperCase() + gateway.slice(1)} payment gateway integrated successfully!`;
+            this.reset(); // Reset the form fields
+        });
+
+        // Cash on Delivery Option
+        document.getElementById('enableCOD').addEventListener('click', function() {
+            document.getElementById('codMessage').innerText = "Cash on Delivery enabled for customers!";
+        });
+    </script>
+</body>
+</html>

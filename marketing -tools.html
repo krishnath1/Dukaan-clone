@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketing Tools - Dukaan Clone</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Marketing Tools</h1>
+        </header>
+
+        <main>
+            <!-- Discount Codes and Coupons Section -->
+            <section class="discount-codes">
+                <h2>Discount Codes and Coupons</h2>
+                <form id="discountForm">
+                    <label for="codeName">Coupon Name:</label>
+                    <input type="text" id="codeName" required>
+                    <label for="discountAmount">Discount Amount (%):</label>
+                    <input type="number" id="discountAmount" required>
+                    <button type="submit">Create Discount Code</button>
+                </form>
+                <p id="discountMessage"></p>
+            </section>
+
+            <!-- Abandoned Cart Recovery Section -->
+            <section class="abandoned-cart">
+                <h2>Abandoned Cart Recovery</h2>
+                <button id="sendReminders">Send Reminders</button>
+                <p id="reminderMessage"></p>
+            </section>
+
+            <!-- SEO Tools Section -->
+            <section class="seo-tools">
+                <h2>SEO Tools</h2>
+                <form id="seoForm">
+                    <label for="metaTitle">Meta Title:</label>
+                    <input type="text" id="metaTitle" required>
+                    <label for="metaDescription">Meta Description:</label>
+                    <textarea id="metaDescription" required></textarea>
+                    <button type="submit">Save SEO Settings</button>
+                </form>
+                <p id="seoMessage"></p>
+            </section>
+
+            <!-- Social Media Integration Section -->
+            <section class="social-media-integration">
+                <h2>Social Media Integration</h2>
+                <button id="shareOnSocialMedia">Share on Social Media</button>
+                <p id="shareMessage"></p>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>© 2024 Dukaan Clone. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Discount Codes Handling
+        document.getElementById('discountForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            const codeName = document.getElementById('codeName').value;
+            const discountAmount = document.getElementById('discountAmount').value;
+            document.getElementById('discountMessage').innerText = `Discount code "${codeName}" created with ${discountAmount}% off!`;
+            this.reset(); // Reset the form fields
+        });
+
+        // Abandoned Cart Recovery
+        document.getElementById('sendReminders').addEventListener('click', function() {
+            document.getElementById('reminderMessage').innerText = "Reminders sent to customers who left products in their cart.";
+        });
+
+        // SEO Tools Handling
+        document.getElementById('seoForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            const metaTitle = document.getElementById('metaTitle').value;
+            const metaDescription = document.getElementById('metaDescription').value;
+            document.getElementById('seoMessage').innerText = `SEO settings saved: Title - "${metaTitle}", Description - "${metaDescription}".`;
+            this.reset(); // Reset the form fields
+        });
+
+        // Social Media Integration
+        document.getElementById('shareOnSocialMedia').addEventListener('click', function() {
+            document.getElementById('shareMessage').innerText = "Product shared on social media!";
+        });
+    </script>
+</body>
+</html>

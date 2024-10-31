@@ -1,0 +1,682 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 20px;
+}
+
+/* Header Section */
+header {
+    background-color: #1e90ff;
+    color: white;
+    text-align: center;
+    padding: 100px 0;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+header button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #1e90ff;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+header button:hover {
+    background-color: #ddd;
+}
+
+/* Swipable Features Section */
+#features {
+    padding: 50px 0;
+    background-color: white;
+    text-align: center;
+}
+
+.swipe-container {
+    overflow: hidden;
+}
+
+.swipe-wrapper {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+}
+
+.feature {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    min-width: 100%;
+}
+
+.swipe-controls {
+    margin-top: 20px;
+}
+
+.swipe-controls button {
+    padding: 10px;
+    font-size: 1rem;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+/* Testimonials Section */
+#testimonials {
+    padding: 50px 0;
+    background-color: #fff;
+}
+
+.testimonials-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.testimonial {
+    width: 45%;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Pricing Section */
+#pricing {
+    padding: 50px 0;
+    background-color: #fff;
+    text-align: center;
+}
+
+.pricing-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.pricing-plan {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 30%;
+}
+
+.pricing-plan h4 {
+    margin: 10px 0;
+}
+
+/* FAQ Section */
+#faq {
+    padding: 50px 0;
+    background-color: white;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+}
+
+/* Footer Section */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #333;
+    color: white;
+}
+/* Signup and Login Page Styles */
+#signup-form, #login-form {
+    padding: 50px 0;
+    text-align: center;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+form label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 5px;
+}
+
+form input {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1.2rem;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+form button:hover {
+    background-color: #1c7ed6;
+}
+
+form p {
+    margin-top: 20px;
+}
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent sidebar and main from wrapping */
+}
+
+/* Header Styles */
+header {
+    background-color: #1e90ff;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    height: 100vh; /* Full height */
+    position: fixed; /* Fixed sidebar */
+    overflow-y: auto; /* Scroll if sidebar content overflows */
+}
+
+.sidebar nav {
+    margin-top: 20px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+}
+
+.sidebar ul li {
+    margin: 20px 0;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    display: block;
+    transition: background-color 0.3s;
+}
+
+.sidebar ul li a:hover {
+    background-color: #e9ecef; /* Highlight on hover */
+}
+
+/* Main Content Styles */
+main {
+    margin-left: 250px; /* Push main content to the right */
+    padding: 20px;
+    width: calc(100% - 250px); /* Full width minus sidebar */
+}
+
+.welcome-section {
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    text-align: center; /* Center text */
+}
+
+.welcome-section h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+.welcome-section p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Quick Store Setup Section */
+.quick-setup {
+    margin-bottom: 40px;
+}
+
+.quick-setup h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.setup-steps {
+    display: flex;
+    justify-content: space-between; /* Space between steps */
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.step {
+    flex: 1;
+    max-width: 300px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.step h4 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #1e90ff;
+}
+
+.step p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.step button {
+    padding: 10px 20px;
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.step button:hover {
+    background-color: #1c7ed6;
+}
+
+/* Store Overview Section */
+.store-overview {
+    margin-bottom: 40px;
+}
+
+.store-overview h3 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.overview-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.overview-item {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.overview-item h4 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.overview-item p {
+    font-size: 1.2rem;
+    color: #666;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #1e90ff;
+    color: white;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 100%;
+        height: auto; /* Let the height adjust to content */
+        position: relative; /* Change to relative on small screens */
+    }
+
+    main {
+        margin-left: 0; /* Remove left margin */
+        width: 100%; /* Full width */
+    }
+
+    .setup-steps {
+        flex-direction: column; /* Stack steps vertically on smaller screens */
+        align-items: center; /* Center align */
+    }
+
+    .step {
+        max-width: 90%; /* Make steps responsive */
+    }
+
+    .overview-grid {
+        grid-template-columns: 1fr; /* Stack items on smaller screens */
+    }
+}}
+/* Additional Styles for the Modal */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+/* Orders Table Styles */
+.orders-list {
+    margin: 20px;
+}
+
+#ordersTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#ordersTable th, #ordersTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#ordersTable th {
+    background-color: #f2f2f2;
+}
+/* Customers Table Styles */
+.customers-list {
+    margin: 20px;
+}
+
+#customersTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#customersTable th, #customersTable td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+#customersTable th {
+    background-color: #f2f2f2;
+}
+/* Settings Form Styles */
+.settings-form {
+    margin: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+/* Order Management Styles */
+.order-tracking,
+.order-fulfillment,
+.shipping-options,
+.order-notifications {
+    margin: 20px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+form {
+    margin: 10px 0;
+}
+/* Marketing Tools Styles */
+.discount-codes,
+.abandoned-cart,
+.seo-tools,
+.social-media-integration {
+    margin: 20px 0;
+}
+
+form {
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+/* Analytics and Reporting Styles */
+.sales-reports,
+.customer-insights,
+.traffic-analysis {
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+/* Admin Tools Styles */
+.user-roles,
+.multi-language-support,
+.backup-recovery {
+    margin: 20px 0;
+}
+
+form {
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+/* Payment Integration Styles */
+.payment-gateway-setup,
+.cash-on-delivery {
+    margin: 20px 0;
+}
+
+form {
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+p {
+    margin-top: 10px;
+    font-weight: bold;
+}
+/* Logout Page Styles */
+.logout-confirmation {
+    text-align: center;
+    margin: 20px 0;
+}
+
+button {
+    padding: 10px 15px;
+    margin: 5px;
+    background-color: #f44336; /* Red color for logout confirmation */
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #e53935;
+}
+
+p {
+    margin-top: 10px;
+    font-weight: bold;
+}
